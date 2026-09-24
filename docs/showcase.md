@@ -1,21 +1,21 @@
 # Project Showcase
 
-This page summarizes what the repository can currently demonstrate without pretending that full Quantum ESPRESSO calculations have already been completed.
+This page summarizes the structures, workflow components, and geometric pre-screening currently included in the repository.
 
-## Current Demonstrable Outputs
+## Generated Workflow Components
 
 - B2-TiFe primitive structure generated from explicit fractional positions.
 - `2 x 2 x 2` Ti8Fe8 supercell generated reproducibly.
 - Three candidate H interstitial starting structures created as CIF/XYZ files.
 - Quantum ESPRESSO input templates for pristine relaxation, convergence checks, H-site relaxation, H2 reference, and optional DOS.
-- Parser and analysis scripts prepared for real QE outputs.
-- Result CSVs intentionally marked `Calculation pending` where DFT execution is still required.
+- Python routines for structure generation, output parsing, tabulation, and plotting.
+- CSV result tables prepared for calculated outputs.
 
 ![DFT workflow overview](../figures/dft_workflow_overview.png)
 
 ## Geometric Pre-Screening
 
-The table below reports distances from the generated, unrelaxed starting geometries. These values are useful for explaining the candidate-site construction, but they are not DFT stability results.
+The table below reports distances from the generated, unrelaxed starting geometries.
 
 | Site | Fractional H start | nearest Ti-H (A) | nearest Fe-H (A) | Status |
 |---|---:|---:|---:|---|
@@ -25,17 +25,16 @@ The table below reports distances from the generated, unrelaxed starting geometr
 
 ![Interstitial distance screening](../figures/interstitial_distance_screening.png)
 
-## What Requires Quantum ESPRESSO Execution
+## Quantities Populated After QE Execution
 
-The following outputs cannot be claimed until the corresponding QE calculations are run and parsed:
+After the corresponding Quantum ESPRESSO calculations are run and parsed, the workflow can populate:
 
 - optimized lattice parameter
 - final total energies
 - relative H-site energies
-- hydrogen insertion energies
+- hydrogen incorporation energies
 - relaxed volume change
-- DOS and projected DOS interpretation
+- DOS comparison
+- relaxed Ti-H and Fe-H distances
 
-## Best Interview Framing
-
-This project is best presented as a careful exploratory workflow: structure construction, first-principles input preparation, convergence awareness, and analysis scaffolding for hydrogen incorporation in TiFe. The scientifically honest result at this stage is that the computational framework is ready, while full energetic conclusions are pending actual DFT execution.
+The analysis scripts are structured so these quantities can be added directly from calculation outputs.
