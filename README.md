@@ -162,3 +162,14 @@ Re-run the analysis scripts after parsed outputs are available.
 The repository currently provides setup, reproducible input generation, parser scaffolding, pending result tables, and plotting templates.
 
 DFT calculation outputs are not included. Result tables intentionally show `Calculation pending` where Quantum ESPRESSO calculations have not yet been run.
+
+## Showcase Summary
+
+For a concise review of the generated structures, current pending-result status, and interview-safe interpretation, see:
+
+[docs/showcase.md](docs/showcase.md)
+
+Current non-DFT showcase figures:
+
+- [figures/dft_workflow_overview.png](figures/dft_workflow_overview.png)
+- [figures/interstitial_distance_screening.png](figures/interstitial_distance_screening.png)

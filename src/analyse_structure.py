@@ -20,16 +20,22 @@ def pending_summary() -> pd.DataFrame:
         h_index = len(structure.symbols) - 1
         ti_distances = nearest_distances(structure, h_index, "Ti", n=4)
         fe_distances = nearest_distances(structure, h_index, "Fe", n=4)
+        nearest_ti = min(ti_distances) if ti_distances else ""
+        nearest_fe = min(fe_distances) if fe_distances else ""
         rows.append(
             {
                 "site": label,
                 "total_energy_eV": "",
                 "relative_energy_eV": "",
-                "nearest_Ti_H_distance_A": min(ti_distances) if ti_distances else "",
-                "nearest_Fe_H_distance_A": min(fe_distances) if fe_distances else "",
+                "nearest_Ti_H_distance_A": nearest_ti,
+                "nearest_Fe_H_distance_A": nearest_fe,
                 "cell_volume_A3": structure.volume,
                 "volume_change_percent": "",
                 "calculation_status": "Calculation pending",
+                "candidate_fractional_position": f"({frac[0]:.3f}, {frac[1]:.3f}, {frac[2]:.3f})",
+                "mean_four_Ti_H_distance_A": sum(ti_distances) / len(ti_distances) if ti_distances else "",
+                "mean_four_Fe_H_distance_A": sum(fe_distances) / len(fe_distances) if fe_distances else "",
+                "geometric_note": "Initial unrelaxed geometry only; not a site-stability result.",
             }
         )
     return pd.DataFrame(rows)

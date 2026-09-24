@@ -1,4 +1,4 @@
-site,total_energy_eV,relative_energy_eV,nearest_Ti_H_distance_A,nearest_Fe_H_distance_A,cell_volume_A3,volume_change_percent,calculation_status
-Site_A_Ti_rich_octahedral,,,2.1001071401240465,1.485,209.5845840000001,,Calculation pending
-Site_B_mixed_octahedral,,,2.1001071401240465,1.485,209.5845840000001,,Calculation pending
-Site_C_tetrahedral_like,,,1.2860477246198916,1.2860477246198916,209.5845840000001,,Calculation pending
+site,total_energy_eV,relative_energy_eV,nearest_Ti_H_distance_A,nearest_Fe_H_distance_A,cell_volume_A3,volume_change_percent,calculation_status,candidate_fractional_position,mean_four_Ti_H_distance_A,mean_four_Fe_H_distance_A,geometric_note
+Site_A_Ti_rich_octahedral,,,2.1001071401240465,1.485,209.5845840000001,,Calculation pending,"(0.250, 0.250, 0.000)",2.1001071401240465,2.402780473293594,Initial unrelaxed geometry only; not a site-stability result.
+Site_B_mixed_octahedral,,,2.1001071401240465,1.485,209.5845840000001,,Calculation pending,"(0.250, 0.000, 0.250)",2.1001071401240465,2.402780473293594,Initial unrelaxed geometry only; not a site-stability result.
+Site_C_tetrahedral_like,,,1.2860477246198916,1.2860477246198916,209.5845840000001,,Calculation pending,"(0.125, 0.125, 0.125)",2.168457361284136,2.168457361284137,Initial unrelaxed geometry only; not a site-stability result.

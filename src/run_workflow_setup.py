@@ -6,6 +6,7 @@ from calculate_insertion_energy import main as calculate_insertion
 from convergence_analysis import main as convergence
 from generate_qe_inputs import main as generate_qe
 from plot_results import main as plot_results
+from showcase import main as showcase
 
 
 def main() -> None:
@@ -17,6 +18,7 @@ def main() -> None:
     convergence()
     calculate_insertion()
     plot_results()
+    showcase()
 
 
 if __name__ == "__main__":
