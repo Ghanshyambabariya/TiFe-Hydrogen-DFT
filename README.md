@@ -4,7 +4,7 @@ Exploratory computational materials project on hydrogen incorporation in B2-TiFe
 
 The project builds TiFe crystal structures, prepares Quantum ESPRESSO input files, creates candidate hydrogen interstitial configurations, and provides Python scripts for parsing and analysing future DFT outputs.
 
-It is intentionally framed as an exploratory university research-support workflow, not a full DFT publication or QM/MM study.
+It is intentionally framed as an exploratory university research-support workflow.
 
 ## What This Project Shows
 
