@@ -1,0 +1,8 @@
+&DOS
+  prefix = 'TiFe_dos'
+  outdir = './tmp'
+  fildos = 'TiFe.dos'
+  Emin = -12.0
+  Emax = 8.0
+  DeltaE = 0.02
+/

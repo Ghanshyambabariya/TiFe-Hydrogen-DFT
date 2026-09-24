@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+qe_outputs/
+parsed_outputs/
+tmp/
+*.out
+*.save/
+pseudo/

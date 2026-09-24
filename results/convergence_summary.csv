@@ -1,0 +1,8 @@
+parameter,value,mesh,total_energy_eV,calculation_status
+ecutwfc,30,6x6x6,,Calculation pending
+ecutwfc,40,6x6x6,,Calculation pending
+ecutwfc,50,6x6x6,,Calculation pending
+ecutwfc,60,6x6x6,,Calculation pending
+kpoints,4x4x4,4x4x4,,Calculation pending
+kpoints,6x6x6,6x6x6,,Calculation pending
+kpoints,8x8x8,8x8x8,,Calculation pending

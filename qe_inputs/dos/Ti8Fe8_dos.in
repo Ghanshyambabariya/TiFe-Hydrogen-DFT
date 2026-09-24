@@ -1,0 +1,8 @@
+&DOS
+  prefix = 'Ti8Fe8_dos'
+  outdir = './tmp'
+  fildos = 'Ti8Fe8.dos'
+  Emin = -12.0
+  Emax = 8.0
+  DeltaE = 0.02
+/

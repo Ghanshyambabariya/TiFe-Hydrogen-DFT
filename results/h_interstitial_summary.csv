@@ -1,0 +1,4 @@
+site,total_energy_eV,relative_energy_eV,nearest_Ti_H_distance_A,nearest_Fe_H_distance_A,cell_volume_A3,volume_change_percent,calculation_status
+Site_A_Ti_rich_octahedral,,,2.1001071401240465,1.485,209.5845840000001,,Calculation pending
+Site_B_mixed_octahedral,,,2.1001071401240465,1.485,209.5845840000001,,Calculation pending
+Site_C_tetrahedral_like,,,1.2860477246198916,1.2860477246198916,209.5845840000001,,Calculation pending

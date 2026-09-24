@@ -1,0 +1,35 @@
+&CONTROL
+  calculation = 'scf'
+  prefix = 'H2_reference'
+  outdir = './tmp'
+  pseudo_dir = './pseudo'
+  tprnfor = .true.
+  tstress = .true.
+/
+&SYSTEM
+  ibrav = 0
+  nat = 2
+  ntyp = 1
+  ecutwfc = 50
+  occupations = 'smearing'
+  smearing = 'mv'
+  degauss = 0.02
+  nspin = 1
+  starting_magnetization(1) = 0.1
+  starting_magnetization(2) = 0.3
+/
+&ELECTRONS
+  conv_thr = 1.0d-8
+  mixing_beta = 0.4
+/
+ATOMIC_SPECIES
+H 1.008000 H.pbe-kjpaw_psl.1.0.0.UPF
+CELL_PARAMETERS angstrom
+   15.0000000000  0.0000000000  0.0000000000
+   0.0000000000  15.0000000000  0.0000000000
+   0.0000000000  0.0000000000  15.0000000000
+ATOMIC_POSITIONS angstrom
+  H   7.5000000000  7.5000000000  7.1300000000
+  H   7.5000000000  7.5000000000  7.8700000000
+K_POINTS automatic
+  1 1 1 0 0 0
