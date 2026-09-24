@@ -2,15 +2,15 @@
 
 ## Objective
 
-The computational workflow explores whether basic periodic DFT calculations can provide qualitative atomic-scale insight into hydrogen incorporation in B2-TiFe.
+The computational workflow explores hydrogen incorporation in B2-TiFe using periodic density functional theory and reproducible Python-based structure preparation.
 
-The aim is not to produce a definitive DFT benchmark. The aim is to build a transparent, reproducible setup that can be discussed alongside experimental hydrogenation work.
+The aim is to connect atomistic modelling with experimental questions in intermetallic hydrogenation, including candidate hydrogen environments, local structural response, and energetic comparison of H-containing configurations.
 
 ## Structure Preparation
 
 Ordered B2-TiFe is constructed with Ti at the cube corner and Fe at the body centre. The initial cubic lattice parameter is set to `2.97 angstrom`.
 
-The primitive cell is expanded to a `2 x 2 x 2` supercell for hydrogen insertion. This gives a starting composition of `Ti8Fe8`.
+The primitive cell is expanded to a `2 x 2 x 2` supercell for hydrogen insertion, giving a starting composition of `Ti8Fe8`.
 
 ## Pristine Relaxation
 
@@ -23,7 +23,7 @@ The input template uses:
 - metallic smearing
 - automatic k-point mesh
 - spin polarization for the Fe-containing system
-- convergence thresholds suitable for an exploratory calculation
+- convergence thresholds for the initial workflow
 
 ## Convergence Check
 
@@ -32,7 +32,7 @@ The convergence workflow generates inputs for several plane-wave cutoffs and k-p
 - `ecutwfc`: 30, 40, 50, 60 Ry
 - k-point meshes: `4x4x4`, `6x6x6`, `8x8x8`
 
-The purpose is to show awareness that DFT results depend on numerical parameters. This is not presented as a rigorous convergence publication.
+These calculations provide an initial sensitivity check for the numerical parameters before comparing structural or energetic quantities.
 
 ## Hydrogen Sites
 
@@ -42,11 +42,15 @@ Three candidate hydrogen positions are generated in the supercell:
 - a second inequivalent octahedral-like environment
 - a tetrahedral-like starting point
 
-Each H-containing structure is intended for structural relaxation before interpreting site preference.
+Each H-containing structure is intended for structural relaxation before site energies and local environments are compared.
+
+## H2 Reference
+
+An isolated H2 molecule is placed in a large cubic cell and prepared as a reference calculation for evaluating hydrogen incorporation energies.
 
 ## Analysis
 
-After Quantum ESPRESSO outputs are available, the analysis should extract:
+After Quantum ESPRESSO outputs are available, the analysis extracts or compares:
 
 - total energy
 - optimized cell volume
@@ -54,6 +58,6 @@ After Quantum ESPRESSO outputs are available, the analysis should extract:
 - relative H-site energies
 - nearest Ti-H and Fe-H distances
 - volume change after hydrogen insertion
-- hydrogen incorporation energy using an H2 reference
+- hydrogen incorporation energy using the H2 reference
 
-If output files are absent, tables remain marked as `Calculation pending`.
+If the corresponding output files are absent, the result tables retain the status `Calculation pending`.
