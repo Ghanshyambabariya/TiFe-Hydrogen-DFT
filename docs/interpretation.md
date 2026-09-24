@@ -1,36 +1,56 @@
-# Interpretation Guidance
+# Analysis and Interpretation
 
-## What Can Be Claimed
+## Geometric Pre-Screening
 
-This project can support the statement:
+The generated H-containing structures provide starting configurations for relaxation. Distances measured from these unrelaxed structures are useful for comparing the local coordination environments of the candidate sites.
 
-> I explored whether first-principles modelling could support my experimental work on hydrogenation of intermetallic compounds. Using TiFe as a representative system, I investigated how different hydrogen interstitial environments could be constructed and compared energetically and how hydrogen incorporation could affect the local structure. It was an exploratory component rather than the main focus of the project, but it introduced me to atomistic quantum-mechanical modelling and motivated my interest in more advanced approaches such as QM/MM.
+These geometric values should be interpreted as initial descriptors rather than relaxed structural properties.
 
-## What Should Not Be Claimed
+## Energetic Comparison
 
-Do not describe this as:
+After Quantum ESPRESSO calculations are available, candidate hydrogen sites can be compared using:
 
-- a complete DFT study
-- a full computational thesis
-- a published computational result
-- a rigorous hydrogen-storage thermodynamics benchmark
-- a QM/MM calculation
-- evidence of advanced QM/MM expertise
+- relaxed total energies
+- relative site energies
+- hydrogen incorporation energies using an H2 reference
+- sensitivity to plane-wave cutoff and k-point sampling
 
-## Reading Pending Results
+The hydrogen incorporation energy is evaluated from the calculated energies of Ti8Fe8H, pristine Ti8Fe8, and H2.
 
-If a table says `Calculation pending`, the calculation setup exists but the Quantum ESPRESSO output has not been generated or parsed.
+## Local Structural Analysis
 
-Placeholder plots are included to show the expected analysis products. They are not calculated results.
+For each relaxed H-containing structure, the analysis can examine:
 
-## Reading Future Calculated Results
-
-When actual outputs are added, site preference should be discussed in terms of:
-
-- relative total energies between relaxed H sites
-- nearest Ti-H and Fe-H distances
-- local structural distortion
+- nearest Ti-H distances
+- nearest Fe-H distances
+- changes in local coordination
+- atomic displacements around H
 - supercell volume change
-- sensitivity to cutoff, k-points, and pseudopotentials
 
-For interview discussion, focus on why the workflow was created and what each calculation would test, rather than overstating numerical precision.
+These descriptors help connect energetic differences with the local atomic environment.
+
+## Electronic Structure
+
+Optional DOS calculations are included for qualitative comparison of the electronic structure before and after hydrogen incorporation.
+
+Relevant features include:
+
+- changes near the Fermi level
+- redistribution of states after H insertion
+- differences between pristine and H-containing structures
+
+## Numerical Sensitivity
+
+Interpretation of calculated energies should consider:
+
+- plane-wave cutoff
+- k-point mesh
+- pseudopotential choice
+- smearing parameters
+- structural-relaxation convergence
+
+The repository includes input sets for initial cutoff and k-point sensitivity checks.
+
+## Current Data Status
+
+Where Quantum ESPRESSO outputs are not yet available, corresponding result fields remain marked `Calculation pending`. Once output files are added, the analysis scripts can populate the energetic and relaxed-structure quantities.
