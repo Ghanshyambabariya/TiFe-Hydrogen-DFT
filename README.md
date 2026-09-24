@@ -1,36 +1,33 @@
 # Exploratory DFT Modelling of Hydrogen Incorporation in B2-TiFe
 
-Exploratory computational materials project on hydrogen incorporation in B2-TiFe intermetallics.
+Computational materials workflow for exploring hydrogen incorporation in B2-TiFe intermetallics using Python and Quantum ESPRESSO.
 
-The project builds TiFe crystal structures, prepares Quantum ESPRESSO input files, creates candidate hydrogen interstitial configurations, and provides Python scripts for parsing and analysing future DFT outputs.
-
-It is intentionally framed as an exploratory university research-support workflow.
+The project builds TiFe crystal structures, generates candidate hydrogen interstitial configurations, prepares Quantum ESPRESSO input files, and provides analysis routines for structural and energetic comparison.
 
 ## Research Context
 
-This repository documents an exploratory computational workflow motivated by an earlier university research project on hydrogenation of intermetallic compounds. The aim was to examine how first-principles modelling could complement experimental observations by constructing candidate hydrogen sites in TiFe and preparing them for comparative quantum-mechanical analysis.
+The workflow was developed to complement experimental work on hydrogenation of intermetallic compounds with an atomistic modelling perspective. B2-TiFe is used as a representative system for examining candidate hydrogen environments, local structural changes, and the computational requirements for comparing hydrogen incorporation sites.
 
-The computational component remained a supporting exploration rather than the main scope of the experimental project. Accordingly, the repository emphasizes reproducible structure generation, Quantum ESPRESSO setup, convergence awareness, and analysis scaffolding without claiming completed DFT energetics.
+## Workflow
 
-## What This Project Shows
-
-- B2-TiFe primitive cell and `2 x 2 x 2` Ti8Fe8 supercell generation.
-- Three candidate H interstitial starting sites.
-- Quantum ESPRESSO templates for relaxation, convergence checks, H2 reference, and optional DOS.
-- Python analysis scripts for energy comparison, insertion energy, local metal-H distances, and volume change.
-- Result tables that clearly remain marked `Calculation pending` until real QE outputs are added.
+- Generate the B2-TiFe primitive cell and a `2 x 2 x 2` Ti8Fe8 supercell.
+- Create three candidate H interstitial starting configurations.
+- Prepare Quantum ESPRESSO inputs for structural relaxation.
+- Generate cutoff and k-point convergence inputs.
+- Prepare an H2 reference calculation for hydrogen incorporation-energy analysis.
+- Generate optional DOS calculation inputs.
+- Analyse local Ti-H/Fe-H distances, cell volume, and energetic outputs.
+- Export summary tables and figures.
 
 ![DFT workflow overview](figures/dft_workflow_overview.png)
 
-## Current Showcase
+## Current Results
 
-The current repository demonstrates the setup and geometry-screening stage. It does not claim completed DFT energies.
+The current repository includes generated structures and geometric pre-screening of the candidate hydrogen sites. Energetic and relaxed-structure quantities are populated after Quantum ESPRESSO outputs are available and parsed.
 
 ![Interstitial distance screening](figures/interstitial_distance_screening.png)
 
-Short showcase page:
-
-[docs/showcase.md](docs/showcase.md)
+See the concise project summary in [docs/showcase.md](docs/showcase.md).
 
 ## Quick Start
 
@@ -39,7 +36,7 @@ python -m pip install -r requirements.txt
 python src/run_workflow_setup.py
 ```
 
-Example QE execution after installing Quantum ESPRESSO and pseudopotentials:
+Example Quantum ESPRESSO execution:
 
 ```bash
 pw.x < qe_inputs/pristine/TiFe_vc_relax.in > qe_outputs/TiFe_vc_relax.out
@@ -52,18 +49,12 @@ structures/   generated CIF and XYZ files
 qe_inputs/    Quantum ESPRESSO input templates
 src/          Python generation and analysis scripts
 results/      CSV summaries
-figures/      showcase and analysis figures
+figures/      workflow and analysis figures
 docs/         methodology and theory notes
 ```
 
-## Scope and Scientific Integrity
-
-No fabricated simulation outputs are included. Energetic conclusions require running the Quantum ESPRESSO calculations and parsing the resulting output files.
-
-This repository should therefore be read as evidence of exploratory exposure to periodic DFT workflow design and analysis preparation, rather than as a completed DFT study or evidence of QM/MM expertise.
-
-More detail:
+## Documentation
 
 - [Methodology](docs/methodology.md)
 - [Theory notes](docs/theory_notes.md)
-- [Interpretation guidance](docs/interpretation.md)
+- [Analysis and interpretation](docs/interpretation.md)
