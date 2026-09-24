@@ -1,10 +1,16 @@
-# TiFe Hydrogen DFT Exploration
+# Exploratory DFT Modelling of Hydrogen Incorporation in B2-TiFe
 
 Exploratory computational materials project on hydrogen incorporation in B2-TiFe intermetallics.
 
 The project builds TiFe crystal structures, prepares Quantum ESPRESSO input files, creates candidate hydrogen interstitial configurations, and provides Python scripts for parsing and analysing future DFT outputs.
 
 It is intentionally framed as an exploratory university research-support workflow.
+
+## Research Context
+
+This repository documents an exploratory computational workflow motivated by an earlier university research project on hydrogenation of intermetallic compounds. The aim was to examine how first-principles modelling could complement experimental observations by constructing candidate hydrogen sites in TiFe and preparing them for comparative quantum-mechanical analysis.
+
+The computational component remained a supporting exploration rather than the main scope of the experimental project. Accordingly, the repository emphasizes reproducible structure generation, Quantum ESPRESSO setup, convergence awareness, and analysis scaffolding without claiming completed DFT energetics.
 
 ## What This Project Shows
 
@@ -50,9 +56,11 @@ figures/      showcase and analysis figures
 docs/         methodology and theory notes
 ```
 
-## Notes
+## Scope and Scientific Integrity
 
 No fabricated simulation outputs are included. Energetic conclusions require running the Quantum ESPRESSO calculations and parsing the resulting output files.
+
+This repository should therefore be read as evidence of exploratory exposure to periodic DFT workflow design and analysis preparation, rather than as a completed DFT study or evidence of QM/MM expertise.
 
 More detail:
 
