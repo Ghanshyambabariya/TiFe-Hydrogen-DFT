@@ -1,0 +1,156 @@
+{
+  "inputs": 17,
+  "pw_inputs": 15,
+  "failed_inputs": 0,
+  "warnings": 0,
+  "files": [
+    {
+      "file": "qe_inputs/convergence/TiFe_ecut_30Ry.in",
+      "kind": "pw.x",
+      "nat": 2,
+      "ntyp": 2,
+      "ecutwfc_Ry": 30.0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/convergence/TiFe_ecut_40Ry.in",
+      "kind": "pw.x",
+      "nat": 2,
+      "ntyp": 2,
+      "ecutwfc_Ry": 40.0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/convergence/TiFe_ecut_50Ry.in",
+      "kind": "pw.x",
+      "nat": 2,
+      "ntyp": 2,
+      "ecutwfc_Ry": 50.0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/convergence/TiFe_ecut_60Ry.in",
+      "kind": "pw.x",
+      "nat": 2,
+      "ntyp": 2,
+      "ecutwfc_Ry": 60.0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/convergence/TiFe_k_4x4x4.in",
+      "kind": "pw.x",
+      "nat": 2,
+      "ntyp": 2,
+      "ecutwfc_Ry": 50.0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/convergence/TiFe_k_6x6x6.in",
+      "kind": "pw.x",
+      "nat": 2,
+      "ntyp": 2,
+      "ecutwfc_Ry": 50.0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/convergence/TiFe_k_8x8x8.in",
+      "kind": "pw.x",
+      "nat": 2,
+      "ntyp": 2,
+      "ecutwfc_Ry": 50.0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/dos/Ti8Fe8_dos.in",
+      "kind": "dos.x",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/dos/Ti8Fe8_scf_for_dos.in",
+      "kind": "pw.x",
+      "nat": 16,
+      "ntyp": 2,
+      "ecutwfc_Ry": 50.0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/dos/TiFe_dos.in",
+      "kind": "dos.x",
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/dos/TiFe_scf_for_dos.in",
+      "kind": "pw.x",
+      "nat": 2,
+      "ntyp": 2,
+      "ecutwfc_Ry": 50.0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/h2/H2_scf.in",
+      "kind": "pw.x",
+      "nat": 2,
+      "ntyp": 1,
+      "ecutwfc_Ry": 50.0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/hydrogen_sites/Ti8Fe8H_siteA_relax.in",
+      "kind": "pw.x",
+      "nat": 17,
+      "ntyp": 3,
+      "ecutwfc_Ry": 50.0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/hydrogen_sites/Ti8Fe8H_siteB_relax.in",
+      "kind": "pw.x",
+      "nat": 17,
+      "ntyp": 3,
+      "ecutwfc_Ry": 50.0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/hydrogen_sites/Ti8Fe8H_siteC_relax.in",
+      "kind": "pw.x",
+      "nat": 17,
+      "ntyp": 3,
+      "ecutwfc_Ry": 50.0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/pristine/Ti8Fe8_relax.in",
+      "kind": "pw.x",
+      "nat": 16,
+      "ntyp": 2,
+      "ecutwfc_Ry": 50.0,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "qe_inputs/pristine/TiFe_vc_relax.in",
+      "kind": "pw.x",
+      "nat": 2,
+      "ntyp": 2,
+      "ecutwfc_Ry": 50.0,
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "scope": "Input consistency only; no pseudopotential or DFT executable check and no converged energies."
+}
