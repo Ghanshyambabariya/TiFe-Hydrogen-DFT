@@ -58,3 +58,12 @@ docs/         methodology and theory notes
 - [Methodology](docs/methodology.md)
 - [Theory notes](docs/theory_notes.md)
 - [Analysis and interpretation](docs/interpretation.md)
+
+
+## Input preflight
+
+The H2 reference was corrected to a fixed-occupations, non-spin-polarized input. Run python src/qe_preflight.py to check the 17 existing input files.
+
+[Input-quality evidence](docs/preflight_evidence.md)
+
+Hydrogen insertion energies remain pending until actual, converged Quantum ESPRESSO runs.

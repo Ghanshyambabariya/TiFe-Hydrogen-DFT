@@ -127,7 +127,7 @@ def write_qe_input(
     nat = len(structure.symbols)
     ntyp = len(set(structure.symbols))
     calc = "vc-relax" if relax_cell else calculation
-    occupations = "smearing"
+    occupations = "fixed" if nspin == 1 else "smearing"
     smearing = "mv"
     degauss = 0.02
     lines = [
@@ -156,6 +156,13 @@ def write_qe_input(
         "  mixing_beta = 0.4",
         "/",
     ]
+    # Nonmagnetic H2: no electronic smearing or spin-initialization terms.
+    if nspin == 1:
+        lines = [line for line in lines if not line.strip().startswith((
+            "smearing =", "degauss =", "starting_magnetization("
+        ))]
+    elif ntyp < 2:
+        lines = [line for line in lines if "starting_magnetization(2)" not in line]
     if calc in {"relax", "vc-relax"}:
         lines += [
             "&IONS",
