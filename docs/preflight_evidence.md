@@ -21,3 +21,12 @@ The current insertion-energy tables are still pending. No DFT results have been 
 The input audit is not a physics or speed benchmark. Faster error detection may avoid wasted DFT jobs; energy and runtime gains require actual QE measurements.
 
 Sources: https://www.quantum-espresso.org/Doc/INPUT_PW.html and https://www.compmatphys.org/wp-content/uploads/2025/12/2025-12_team02_project-paper.pdf.
+
+
+## Second check: avoid duplicate starting sites
+
+Site A at (0.25, 0.25, 0) and site B at (0.25, 0, 0.25) differ only by swapping the y and z axes. The script checks that this permutation preserves the atom-resolved Ti and Fe framework in the cubic 2x2x2 cell.
+
+Under those assumptions, the three original starting positions form two distinct groups: {A, B} and {C}. One of three site-relaxation runs could be omitted, a 33.33% reduction in the number of planned H-site calculations. This is a planning result, not measured compute time; symmetry breaking must be checked before applying it to other structures.
+
+[Symmetry audit](../results/preflight/site_symmetry.md) | [Screening script](../src/site_symmetry.py)
